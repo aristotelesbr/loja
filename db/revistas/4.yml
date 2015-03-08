@@ -1,0 +1,6 @@
+--- !ruby/object:Revista
+titulo: Mundo Jota
+valor: 10.9
+id: 4
+destroyed: false
+new_record: false

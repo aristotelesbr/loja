@@ -1,0 +1,68 @@
+--- !ruby/object:Livro
+titulo: TDD
+autor: Mauricio Aniche
+isbn: '123454'
+numero_de_paginas: 247
+valor: 69.9
+categoria: :testes
+
+--- !ruby/object:Livro
+titulo: Web Design Responsivo
+autor: Tarcio Zemel
+isbn: '45256'
+numero_de_paginas: 240
+valor: 69.9
+categoria: :web
+
+--- !ruby/object:Livro
+titulo: Web Design Responsivo
+autor: Tárcio Zemel
+isbn: '45256'
+numero_de_paginas: 240
+valor: 69.9
+categoria: :web
+
+--- !ruby/object:Livro
+titulo: Web com JSF e JPA
+autor: Gilliard Cordeiro
+isbn: '543232'
+numero_de_paginas: 270
+valor: 69.9
+categoria: :web
+
+--- !ruby/object:Livro
+titulo: TDD
+autor: Mauricio Aniche
+isbn: '1'
+numero_de_paginas: '123454'
+categoria: :testes
+valor: 247
+desconto: 0.15
+
+--- !ruby/object:Livro
+titulo: TDD
+autor: Mauricio Aniche
+isbn: '1'
+numero_de_paginas: '123454'
+categoria: :testes
+valor: 247
+desconto: 0.15
+
+--- !ruby/object:Livro
+titulo: TDD
+autor: Mauricio Aniche
+isbn: '123454'
+numero_de_paginas: 247
+categoria: :testes
+valor: 69.9
+desconto: 0.15
+
+--- !ruby/object:Livro
+titulo: Web Design Responsivo
+autor: Tárcio Zemel
+isbn: '45256'
+numero_de_paginas: 240
+categoria: :web
+valor: 69.9
+desconto: 0.15
+

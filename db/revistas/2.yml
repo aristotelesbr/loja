@@ -1,0 +1,5 @@
+--- !ruby/object:Revista
+titulo: VEJA
+valor: 12.9
+id: 2
+destroyed: false

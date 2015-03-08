@@ -1,0 +1,5 @@
+--- !ruby/object:Revista
+titulo: Gracie Mag
+valor: 9.9
+id: 8
+destroyed: false
