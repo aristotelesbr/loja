@@ -23,7 +23,7 @@ module ActiveFile
 				YAML.load File.open("db/revistas/#{id}.yml", "r")
 			end
 		end			
-		
+
 		def next_id
 			Dir.glob("db/revistas/*yml").size + 1
 		end
@@ -66,9 +66,27 @@ module ActiveFile
 		end
 	end
 
+	def method_missing(name, *args, &block)
+		load_all.selct do |object|
+			field = name.to_s.split("_").last
+			object.send(field) == args.first
+			super if @fields.include? field
+
+			load_all.select do |object|
+				object.send(field) == args.first
+			end
+		end
+	end
+
 	private
 
-	def serialize
-		YAML.dump self
+	def load_all
+		Dir.glob('db/revistas/*.yml').map do |file|
+			deserialize file
+		end
+	end
+
+	def deserialize(file)
+		YAML.load File.open(file, "r")
 	end
 end
