@@ -67,18 +67,28 @@ module ActiveFile
 	end
 
 	def method_missing(name, *args, &block)
-		load_all.selct do |object|
-			field = name.to_s.split("_").last
-			object.send(field) == args.first
-			super if @fields.include? field
+		super unless name.to_s =~ /^find_by_/
 
-			load_all.select do |object|
-				object.send(field) == args.first
-			end
+		argument = args.first
+		field = name.to_split("_").last
+
+		super if @fields.include? field
+
+		load_all.select do |object|
+			shoud_select? object, field, argument
 		end
 	end
 
+
 	private
+
+	def should_select?(object, field, argument)
+		if argument.kind_of? Regexp
+			object.send(field) =~ argument
+		else
+			object.send(field) == argument
+		end	
+	end
 
 	def load_all
 		Dir.glob('db/revistas/*.yml').map do |file|

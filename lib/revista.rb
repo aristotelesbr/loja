@@ -1,5 +1,5 @@
 # coding: utf-8
-class Revista
+class Revista 
 	#mixing
 	include ActiveFile
 
